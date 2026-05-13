@@ -13,69 +13,71 @@ function App() {
             <a href="#inicio">Inicio</a>
             <a href="#productos">Productos</a>
             <a href="#nosotros">Nosotros</a>
-            <a href="#aplicaciones">Aplicaciones</a>
             <a href="#contacto">Contacto</a>
           </nav>
         </div>
       </header>
 
       <main>
+        <section id="inicio" className="hero">
+          <div className="container hero-grid">
+            <div className="hero-content">
+              <span className="tag">Equipos certificados para cada altura</span>
 
-      <section id="inicio" className="hero pattern-dark">
-        <div className="container hero-grid">
-          <div className="hero-content">
-            <span className="tag">Equipos certificados para cada altura</span>
+              <h1>Llega más lejos, trabaja con seguridad</h1>
 
-            <h1>Llega más lejos, trabaja con seguridad</h1>
+              <p>
+                En TODO ALTURAS ofrecemos soluciones integrales para trabajos en altura
+                en construcción, industria, mantenimiento y más. Contamos con equipos
+                certificados, asesoría personalizada y servicio confiable.
+              </p>
 
-            <p>
-              En TODO ALTURAS ofrecemos soluciones integrales para trabajos en altura
-              en construcción, industria, mantenimiento y más. Contamos con equipos
-              certificados, asesoría personalizada y servicio confiable.
-            </p>
+              <div className="hero-buttons">
+                <a href="#productos" className="btn primary">
+                  Ver productos
+                </a>
 
-            <div className="hero-buttons">
-              <a href="#productos" className="btn primary">
-                Ver productos
-              </a>
-
-              <a href="#contacto" className="btn secondary">
-                Cotiza hoy
-              </a>
-            </div>
-          </div>
-
-          <div className="hero-card">
-            <h2>Seguridad · Calidad · Confianza</h2>
-
-            <div className="hero-features">
-              <div>
-                <strong>Equipos</strong>
-                <span>Certificados</span>
-              </div>
-
-              <div>
-                <strong>Marcas</strong>
-                <span>Líderes</span>
-              </div>
-
-              <div>
-                <strong>Asesoría</strong>
-                <span>Personalizada</span>
-              </div>
-
-              <div>
-                <strong>Mantenimiento</strong>
-                <span>Garantizado</span>
+                <a href="#contacto" className="btn secondary">
+                  Cotiza hoy
+                </a>
               </div>
             </div>
+
+            <div className="hero-card">
+              <h2>Seguridad · Calidad · Confianza</h2>
+
+              <div className="hero-features">
+                <div>
+                  <strong>Equipos</strong>
+                  <span>Certificados</span>
+                </div>
+
+                <div>
+                  <strong>Marcas</strong>
+                  <span>Líderes</span>
+                </div>
+
+                <div>
+                  <strong>Asesoría</strong>
+                  <span>Personalizada</span>
+                </div>
+
+                <div>
+                  <strong>Mantenimiento</strong>
+                  <span>Garantizado</span>
+                </div>
+              </div>
+            </div>
           </div>
+        </section>
+
+        <div className="section-divider">
+          <div className="divider-layer-one"></div>
+          <div className="divider-layer-two"></div>
+          <div className="divider-layer-three"></div>
         </div>
-      </section>
 
-      <div className="section-divider"></div>
-
-        <section id="productos" className="section">
+        <section id="productos" className="section pattern-light products-section">
           <div className="container">
             <div className="section-heading">
               <span className="section-label">Nuestros equipos</span>
@@ -190,48 +192,36 @@ function App() {
           </div>
         </section>
 
-        <section id="nosotros" className="section light">
-          <div className="container two-columns">
-            <div>
-              <span className="section-label">Acerca de nosotros</span>
-              <h2>Soluciones integrales para trabajo seguro en alturas</h2>
-            </div>
+        <section id="nosotros" className="about-section">
+          <div className="about-content">
+            <div className="about-text">
+              <span className="about-small-title">Acerca de nosotros</span>
 
-            <div>
-              <p className="section-text">
-                TODO ALTURAS brinda alquiler de maquinaria y equipos certificados para
-                facilitar el acceso seguro en proyectos industriales, comerciales y de
-                construcción.
+              <h2>Nosotros</h2>
+
+              <div className="about-line"></div>
+
+              <p>
+                Somos una empresa aliada en sus proyectos, enfocada en brindar soluciones
+                integrales para trabajo seguro en alturas, alquiler de maquinaria y equipos
+                certificados.
               </p>
 
-              <p className="section-text">
-                Nuestro compromiso es ofrecer seguridad, calidad y confianza a través de
-                equipos adecuados, acompañamiento técnico y atención oportuna para cada
-                necesidad del cliente.
+              <p>
+                Contamos con un equipo comprometido en ofrecer asesoría personalizada,
+                calidad, seguridad y eficiencia para que cada cliente tome la mejor decisión
+                según las necesidades de su proyecto.
+              </p>
+
+              <p>
+                Atendemos proyectos en construcción, industria, mantenimiento e instalación,
+                ofreciendo equipos certificados y acompañamiento técnico oportuno.
               </p>
             </div>
-          </div>
-        </section>
 
-        <section id="aplicaciones" className="section applications">
-          <div className="container">
-            <div className="section-heading">
-              <span className="section-label">Ideal para múltiples aplicaciones</span>
-              <h2>Soluciones para diferentes sectores</h2>
-            </div>
-
-            <div className="app-grid">
-              <article className="app-card">
-                <span>Industria</span>
-              </article>
-
-              <article className="app-card">
-                <span>Construcción</span>
-              </article>
-
-              <article className="app-card">
-                <span>Mantenimiento</span>
-              </article>
+            <div className="about-image">
+              <div className="about-image-overlay"></div>
+              <span>Trabajo seguro en alturas</span>
             </div>
           </div>
         </section>
