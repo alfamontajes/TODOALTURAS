@@ -855,10 +855,10 @@
   position: relative;
   min-height: 620px;
   background:
-    linear-gradient(90deg, rgba(6, 35, 74, 0.08), rgba(6, 35, 74, 0.12)),
+    linear-gradient(90deg, rgba(6, 35, 74, 0.16), rgba(6, 35, 74, 0.08)),
     url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-attachment: fixed;
   overflow: hidden;
 }
