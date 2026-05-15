@@ -63,3 +63,7 @@ coverage/
 *.xlsx
 *.xlsm
 *.csv
+
+# Permitir imágenes necesarias de la página
+!public/
+!public/**
