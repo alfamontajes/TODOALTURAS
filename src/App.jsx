@@ -6,7 +6,7 @@ function App() {
       <header className="header">
         <div className="container nav">
           <a href="#inicio" className="logo">
-            TODO <span>ALTURAS</span>
+            <img src="/todoalturas-logo.png" alt="TODO ALTURAS" />
           </a>
 
           <nav className="menu">
@@ -43,31 +43,6 @@ function App() {
               </div>
             </div>
 
-            <div className="hero-card">
-              <h2>Seguridad · Calidad · Confianza</h2>
-
-              <div className="hero-features">
-                <div>
-                  <strong>Equipos</strong>
-                  <span>Certificados</span>
-                </div>
-
-                <div>
-                  <strong>Marcas</strong>
-                  <span>Líderes</span>
-                </div>
-
-                <div>
-                  <strong>Asesoría</strong>
-                  <span>Personalizada</span>
-                </div>
-
-                <div>
-                  <strong>Mantenimiento</strong>
-                  <span>Garantizado</span>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -271,7 +246,7 @@ function App() {
             <div className="contact-box">
               <div className="contact-info">
                 <p>
-                  <strong>WhatsApp / Celular:</strong> 300 639 7448
+                  <strong>Celular:</strong> 300 639 7448
                 </p>
 
                 <p>
@@ -285,25 +260,11 @@ function App() {
                 <p>
                   <strong>Correo:</strong> alfamontajesycubiertas@hotmail.com
                 </p>
+                <p>
+                  <strong>Correo:</strong> todoalturas@alfamontajesycubiertas.com
+                </p>                
               </div>
 
-              <div className="hero-buttons">
-                <a
-                  className="btn primary"
-                  href="https://wa.me/573006397448"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Escribir por WhatsApp
-                </a>
-
-                <a
-                  className="btn secondary"
-                  href="mailto:alfamontajesycubiertas@hotmail.com"
-                >
-                  Enviar correo
-                </a>
-              </div>
             </div>
           </div>
         </section>
@@ -315,6 +276,15 @@ function App() {
           <p>Equipos certificados para trabajo seguro en alturas.</p>
         </div>
       </footer>
+      <a
+        className="whatsapp-float"
+        href="https://wa.me/573014874353?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20TODO%20ALTURAS."
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Abrir chat de WhatsApp con TODO ALTURAS"
+      >
+        <img src="/whatsapp-icon.png" alt="WhatsApp" />
+      </a>    
     </>
   )
 }
