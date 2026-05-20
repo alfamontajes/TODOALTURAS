@@ -6,7 +6,7 @@ function App() {
       <header className="header">
         <div className="container nav">
           <a href="#inicio" className="logo">
-            <img src="/prueba2.png" alt="TODO ALTURAS" />
+            <img src="/todoalturas-logo-inicio.png" alt="TODO ALTURAS" />
           </a>
 
           <nav className="menu">
