@@ -20,30 +20,12 @@ function App() {
 
       <main>
         <section id="inicio" className="hero">
-          <div className="container hero-grid">
-            <div className="hero-content">
-              <span className="tag">Equipos certificados para cada altura</span>
+          <video className="hero-video" autoPlay muted loop playsInline>
+            <source src="/banner-video.mp4" type="video/mp4" />
+            Tu navegador no soporta video HTML5.
+          </video>
 
-              <h1>Llega más lejos, trabaja con seguridad</h1>
-
-              <p>
-                En TODO ALTURAS ofrecemos soluciones integrales para trabajos en altura
-                en construcción, industria, mantenimiento y más. Contamos con equipos
-                certificados, asesoría personalizada y servicio confiable.
-              </p>
-
-              <div className="hero-buttons">
-                <a href="#productos" className="btn primary">
-                  Ver productos
-                </a>
-
-                <a href="#contacto" className="btn secondary">
-                  Cotiza hoy
-                </a>
-              </div>
-            </div>
-
-          </div>
+          <div className="hero-overlay"></div>
         </section>
 
         <div className="section-divider">
