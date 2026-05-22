@@ -695,41 +695,6 @@ main {
   font-size: 0.9rem;
 }
 
-/* =========================
-   POR QUÉ ELEGIRNOS
-========================= */
-
-.why {
-  background: var(--gris-claro);
-  z-index: 7;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-  margin-top: 38px;
-}
-
-.why-item {
-  background: var(--blanco);
-  border-radius: 18px;
-  padding: 26px;
-  border: 1px solid var(--gris-borde);
-  box-shadow: var(--sombra);
-}
-
-.why-item strong {
-  display: block;
-  color: var(--azul-oscuro);
-  font-size: 1.05rem;
-  margin-bottom: 10px;
-}
-
-.why-item p {
-  color: var(--gris-texto);
-  line-height: 1.6;
-}
 
 /* =========================
    CONTACTO
