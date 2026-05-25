@@ -1,86 +1,105 @@
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 const productos = {
   manlift: {
     etiqueta: 'MANLIFT',
     titulo: 'Manlift Grove AMZ50XT',
+    imagen: '/productos/manlift-grove-amz50xt.jpeg',
+    fichaTecnica: '/fichas/ficha-tecnica-manlift-grove-amz50xt.pdf',
     descripcion:
       'Equipo ideal para trabajos en altura, mantenimiento industrial, instalación de estructuras y acceso seguro en zonas elevadas.',
     detalle:
       'El Manlift Grove AMZ50XT es una solución eficiente para trabajos que requieren alcance vertical y horizontal, permitiendo realizar labores de mantenimiento, instalación, inspección y montaje con mayor seguridad.',
     caracteristicas: [
-      'Altura de trabajo aproximada: 15 m',
-      'Alcance horizontal aproximado: 9,14 m',
-      'Capacidad de carga: 227 kg',
-      'Tracción 4WD',
+      'Equipo articulado para trabajos en altura.',
+      'Ideal para exteriores, obras, industria y mantenimiento.',
+      'Permite acceso a zonas elevadas con alcance horizontal.',
+      'Diseñado para operación segura en terrenos exigentes.',
+      'Apto para instalación de estructuras, cubiertas y mantenimiento industrial.',
     ],
-    aplicaciones: [
-      'Mantenimiento industrial',
-      'Instalación de estructuras',
-      'Trabajos en bodegas',
-      'Montajes en zonas elevadas',
+    especificaciones: [
+      { nombre: 'Altura de trabajo aproximada', valor: '15 m' },
+      { nombre: 'Alcance horizontal aproximado', valor: '9,14 m' },
+      { nombre: 'Capacidad de carga', valor: '227 kg' },
+      { nombre: 'Tracción', valor: '4WD' },
+      { nombre: 'Tipo de equipo', valor: 'Brazo articulado / Manlift' },
     ],
   },
+
   tijera: {
     etiqueta: 'TIJERA',
     titulo: 'Plataforma tipo tijera',
+    imagen: '/productos/plataforma-tijera.jpg',
+    fichaTecnica: '/fichas/ficha-tecnica-plataforma-tijera.pdf',
     descripcion:
       'Plataforma de elevación para trabajos verticales en interiores, bodegas, mantenimiento, montajes y actividades de instalación.',
     detalle:
       'La plataforma tipo tijera es ideal para trabajos verticales donde se requiere estabilidad, capacidad de carga y una superficie segura para el personal operativo.',
     caracteristicas: [
-      'Altura de trabajo aproximada: 9,8 m',
-      'Capacidad de carga: 567 kg',
-      'Alimentación diésel',
-      'Tracción 4x4',
+      'Plataforma estable para trabajos verticales.',
+      'Recomendada para bodegas, mantenimiento e instalaciones.',
+      'Amplia capacidad de carga para personal y herramientas.',
+      'Equipo práctico para trabajos en superficies niveladas.',
+      'Ideal para labores de construcción, montaje y mantenimiento.',
     ],
-    aplicaciones: [
-      'Trabajos en interiores',
-      'Bodegas y centros logísticos',
-      'Mantenimiento general',
-      'Instalaciones eléctricas y mecánicas',
+    especificaciones: [
+      { nombre: 'Altura de trabajo aproximada', valor: '9,8 m' },
+      { nombre: 'Capacidad de carga', valor: '567 kg' },
+      { nombre: 'Alimentación', valor: 'Diésel' },
+      { nombre: 'Tracción', valor: '4x4' },
+      { nombre: 'Tipo de equipo', valor: 'Plataforma elevadora tipo tijera' },
     ],
   },
+
   andamio: {
     etiqueta: 'ANDAMIO',
     titulo: 'Andamio multidireccional certificado',
+    imagen: '/productos/andamio-multidireccional.jpg',
+    fichaTecnica: '/fichas/ficha-tecnica-andamio-multidireccional.pdf',
     descripcion:
       'Sistema modular certificado para obras, montajes, mantenimiento de fachadas, cubiertas y acceso seguro en diferentes niveles de trabajo.',
     detalle:
       'El andamio multidireccional certificado permite crear estructuras seguras, resistentes y adaptables a diferentes tipos de obra, facilitando el acceso a distintos niveles de trabajo.',
     caracteristicas: [
-      'Sistema modular versátil',
-      'Alta resistencia y durabilidad',
-      'Seguridad certificada',
-      'Fácil montaje y adaptación',
+      'Sistema modular versátil y adaptable.',
+      'Permite configuraciones para diferentes tipos de obra.',
+      'Estructura resistente para trabajos en altura.',
+      'Ideal para fachadas, cubiertas, mantenimiento y construcción.',
+      'Equipo certificado para acceso seguro en diferentes niveles.',
     ],
-    aplicaciones: [
-      'Construcción',
-      'Mantenimiento de fachadas',
-      'Instalación de cubiertas',
-      'Acceso seguro en obra',
+    especificaciones: [
+      { nombre: 'Tipo de sistema', valor: 'Andamio multidireccional modular' },
+      { nombre: 'Uso principal', valor: 'Acceso seguro en alturas' },
+      { nombre: 'Aplicación', valor: 'Construcción, fachadas, cubiertas y mantenimiento' },
+      { nombre: 'Montaje', valor: 'Modular y adaptable' },
+      { nombre: 'Condición', valor: 'Certificado' },
     ],
   },
+
   colgante: {
     etiqueta: 'COLGANTE',
     titulo: 'Andamio colgante eléctrico certificado',
+    imagen: '/productos/andamio-colgante-electrico.jpg',
+    fichaTecnica: '/fichas/ficha-tecnica-andamio-colgante-electrico.pdf',
     descripcion:
       'Solución para trabajos en fachadas y acceso vertical seguro en proyectos de mantenimiento, instalación y construcción.',
     detalle:
       'El andamio colgante eléctrico certificado es una alternativa práctica para trabajos verticales en fachadas, permitiendo acceso seguro y eficiente en proyectos de gran altura.',
     caracteristicas: [
-      'Equipo eléctrico de alto rendimiento',
-      'Alta capacidad de carga',
-      'Versátil y eficiente',
-      'Seguridad certificada',
+      'Equipo eléctrico para acceso vertical.',
+      'Ideal para trabajos en fachadas y edificios.',
+      'Permite desplazamiento vertical seguro.',
+      'Útil en mantenimiento, instalación y construcción.',
+      'Solución eficiente para proyectos de altura.',
     ],
-    aplicaciones: [
-      'Trabajos en fachadas',
-      'Mantenimiento de edificios',
-      'Instalación en altura',
-      'Proyectos de construcción vertical',
+    especificaciones: [
+      { nombre: 'Tipo de equipo', valor: 'Andamio colgante eléctrico' },
+      { nombre: 'Uso principal', valor: 'Acceso vertical en fachadas' },
+      { nombre: 'Aplicación', valor: 'Mantenimiento, construcción e instalación' },
+      { nombre: 'Operación', valor: 'Eléctrica' },
+      { nombre: 'Condición', valor: 'Certificado' },
     ],
   },
 }
@@ -298,6 +317,7 @@ function Inicio() {
 
 function ProductoPage({ tipo }) {
   const producto = productos[tipo]
+  const [tabActiva, setTabActiva] = useState('caracteristicas')
 
   if (!producto) {
     return (
@@ -332,53 +352,87 @@ function ProductoPage({ tipo }) {
       <Header />
 
       <main>
-        <section className="section pattern-light products-section">
-          <div className="container">
-            <div className="section-heading">
-              <span className="section-label">{producto.etiqueta}</span>
-              <h2>{producto.titulo}</h2>
-
-              <p className="section-text">{producto.descripcion}</p>
+        <section className="product-detail-section">
+          <div className="container product-detail-grid">
+            <div className="product-detail-image">
+              <img src={producto.imagen} alt={producto.titulo} />
             </div>
 
-            <div className="two-columns" style={{ marginTop: '42px' }}>
-              <div className="product-card">
-                <div className="product-image">
-                  <span>{producto.etiqueta}</span>
-                </div>
+            <div className="product-detail-info">
+              <span className="section-label">{producto.etiqueta}</span>
+              <h1>{producto.titulo}</h1>
+              <p>{producto.detalle}</p>
 
-                <div className="product-content">
-                  <h3>{producto.titulo}</h3>
-                  <p>{producto.detalle}</p>
+              <div className="product-tabs">
+                <button
+                  className={tabActiva === 'caracteristicas' ? 'active' : ''}
+                  onClick={() => setTabActiva('caracteristicas')}
+                >
+                  Características
+                </button>
 
-                  <Link to="/#productos" className="product-link">
-                    Ver otros equipos
-                  </Link>
-                </div>
+                <button
+                  className={tabActiva === 'especificaciones' ? 'active' : ''}
+                  onClick={() => setTabActiva('especificaciones')}
+                >
+                  Especificaciones
+                </button>
+
+                <button
+                  className={tabActiva === 'ficha' ? 'active' : ''}
+                  onClick={() => setTabActiva('ficha')}
+                >
+                  Ficha técnica
+                </button>
               </div>
 
-              <div className="contact-box" style={{ background: '#ffffff' }}>
-                <span className="section-label">Información del equipo</span>
+              <div className="product-tab-content">
+                {tabActiva === 'caracteristicas' && (
+                  <ul className="detail-list">
+                    {producto.caracteristicas.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                )}
 
-                <h2 style={{ color: '#06234a', marginTop: 0 }}>Características</h2>
+                {tabActiva === 'especificaciones' && (
+                  <div className="spec-table">
+                    {producto.especificaciones.map((item) => (
+                      <div className="spec-row" key={item.nombre}>
+                        <strong>{item.nombre}</strong>
+                        <span>{item.valor}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
-                <ul className="product-content" style={{ padding: 0, textAlign: 'left' }}>
-                  {producto.caracteristicas.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
+                {tabActiva === 'ficha' && (
+                  <div className="ficha-box">
+                    <p>
+                      Descarga la ficha técnica del equipo para conocer más detalles
+                      sobre sus características, aplicaciones y especificaciones.
+                    </p>
 
-                <h2 style={{ color: '#06234a' }}>Aplicaciones</h2>
+                    <a
+                      href={producto.fichaTecnica}
+                      className="product-link"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Descargar ficha técnica
+                    </a>
+                  </div>
+                )}
+              </div>
 
-                <ul className="product-content" style={{ padding: 0, textAlign: 'left' }}>
-                  {producto.aplicaciones.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-
+              <div className="product-detail-actions">
                 <a href="#contacto" className="product-link">
                   Solicitar cotización
                 </a>
+
+                <Link to="/#productos" className="back-link">
+                  Ver otros equipos
+                </Link>
               </div>
             </div>
           </div>
