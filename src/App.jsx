@@ -108,7 +108,7 @@ function ScrollToHash() {
   const location = useLocation()
 
   useEffect(() => {
-    if (location.hash) {
+    if (location.hash) {  
       const elemento = document.querySelector(location.hash)
 
       if (elemento) {
