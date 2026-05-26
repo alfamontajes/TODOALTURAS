@@ -1009,19 +1009,20 @@ main {
   overflow: hidden;
   border: 1px solid var(--gris-borde);
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  padding: 18px;
+  padding: 0;
+  min-height: 720px;
 }
 
 .product-detail-image img {
   width: 100%;
-  height: auto;
-  max-height: 540px;
+  height: 100%;
+  min-height: 720px;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  border-radius: 16px;
+  border-radius: 22px;
 }
 
 .product-detail-info {
