@@ -5,26 +5,103 @@ import './App.css'
 const productos = {
   manlift: {
     etiqueta: 'MANLIFT',
-    titulo: 'Manlift Grove AMZ50XT',
+    titulo: 'Manlifts / Brazos articulados',
     imagen: '/productos/manlift-grove-amz50xt.jpeg',
     fichaTecnica: '/fichas/ficha-tecnica-manlift-grove-amz50xt.pdf',
     descripcion:
-      'Equipo ideal para trabajos en altura, mantenimiento industrial, instalación de estructuras y acceso seguro en zonas elevadas.',
+      'Equipos ideales para trabajos en altura, mantenimiento industrial, instalación de estructuras y acceso seguro en zonas elevadas.',
     detalle:
-      'El Manlift Grove AMZ50XT es una solución eficiente para trabajos que requieren alcance vertical y horizontal, permitiendo realizar labores de mantenimiento, instalación, inspección y montaje con mayor seguridad.',
+      'Selecciona el manlift que necesitas y revisa su imagen, características, especificaciones y ficha técnica.',
     caracteristicas: [
-      'Equipo articulado para trabajos en altura.',
-      'Ideal para exteriores, obras, industria y mantenimiento.',
-      'Permite acceso a zonas elevadas con alcance horizontal.',
-      'Diseñado para operación segura en terrenos exigentes.',
-      'Apto para instalación de estructuras, cubiertas y mantenimiento industrial.',
+      'Equipos articulados para trabajos en altura.',
+      'Ideales para exteriores, obras, industria y mantenimiento.',
+      'Permiten acceso a zonas elevadas con alcance horizontal.',
+      'Diseñados para operación segura en terrenos exigentes.',
+      'Aptos para instalación de estructuras, cubiertas y mantenimiento industrial.',
     ],
     especificaciones: [
-      { nombre: 'Altura de trabajo aproximada', valor: '15 m' },
-      { nombre: 'Alcance horizontal aproximado', valor: '9,14 m' },
-      { nombre: 'Capacidad de carga', valor: '227 kg' },
-      { nombre: 'Tracción', valor: '4WD' },
-      { nombre: 'Tipo de equipo', valor: 'Brazo articulado / Manlift' },
+      { nombre: 'Categoría', valor: 'Brazos articulados / Manlift' },
+      { nombre: 'Uso principal', valor: 'Trabajo seguro en alturas' },
+      { nombre: 'Aplicación', valor: 'Obra, mantenimiento, instalación e industria' },
+      { nombre: 'Disponibilidad', valor: 'Según programación y proyecto' },
+      { nombre: 'Condición', valor: 'Equipo certificado' },
+    ],
+    modelos: [
+      {
+        nombre: 'Manlift 1',
+        etiqueta: 'MANLIFT',
+        titulo: 'Manlift Grove AMZ50XT',
+        imagen: '/productos/manlift-grove-amz50xt.jpeg',
+        fichaTecnica: '/fichas/ficha-tecnica-manlift-grove-amz50xt.pdf',
+        descripcion:
+          'Equipo ideal para trabajos en altura, mantenimiento industrial, instalación de estructuras y acceso seguro en zonas elevadas.',
+        detalle:
+          'El Manlift Grove AMZ50XT es una solución eficiente para trabajos que requieren alcance vertical y horizontal, permitiendo realizar labores de mantenimiento, instalación, inspección y montaje con mayor seguridad.',
+        caracteristicas: [
+          'Equipo articulado para trabajos en altura.',
+          'Ideal para exteriores, obras, industria y mantenimiento.',
+          'Permite acceso a zonas elevadas con alcance horizontal.',
+          'Diseñado para operación segura en terrenos exigentes.',
+          'Apto para instalación de estructuras, cubiertas y mantenimiento industrial.',
+        ],
+        especificaciones: [
+          { nombre: 'Altura de trabajo aproximada', valor: '15 m' },
+          { nombre: 'Alcance horizontal aproximado', valor: '9,14 m' },
+          { nombre: 'Capacidad de carga', valor: '227 kg' },
+          { nombre: 'Tracción', valor: '4WD' },
+          { nombre: 'Tipo de equipo', valor: 'Brazo articulado / Manlift' },
+        ],
+      },
+      {
+        nombre: 'Manlift 2',
+        etiqueta: 'MANLIFT',
+        titulo: 'Manlift 2',
+        imagen: '/productos/manlift-2.jpeg',
+        fichaTecnica: '/fichas/ficha-tecnica-manlift-2.pdf',
+        descripcion:
+          'Manlift disponible para proyectos de mantenimiento, montaje, instalación y acceso seguro en altura.',
+        detalle:
+          'Este manlift permite realizar trabajos en altura con estabilidad, alcance y seguridad, ideal para labores industriales, construcción y mantenimiento.',
+        caracteristicas: [
+          'Equipo articulado para acceso seguro en altura.',
+          'Recomendado para mantenimiento, obra e instalación.',
+          'Permite realizar trabajos con mayor alcance y movilidad.',
+          'Apto para diferentes superficies de trabajo según evaluación técnica.',
+          'Disponible para alquiler con acompañamiento y asesoría.',
+        ],
+        especificaciones: [
+          { nombre: 'Altura de trabajo aproximada', valor: 'Por confirmar' },
+          { nombre: 'Alcance horizontal aproximado', valor: 'Por confirmar' },
+          { nombre: 'Capacidad de carga', valor: 'Por confirmar' },
+          { nombre: 'Tracción', valor: 'Por confirmar' },
+          { nombre: 'Tipo de equipo', valor: 'Brazo articulado / Manlift' },
+        ],
+      },
+      {
+        nombre: 'Manlift 3',
+        etiqueta: 'MANLIFT',
+        titulo: 'Manlift 3',
+        imagen: '/productos/manlift-3.jpeg',
+        fichaTecnica: '/fichas/ficha-tecnica-manlift-3.pdf',
+        descripcion:
+          'Equipo para trabajos en altura diseñado para proyectos que requieren acceso seguro, eficiencia y versatilidad.',
+        detalle:
+          'Este manlift es una alternativa práctica para trabajos de mantenimiento, inspección, instalación y montaje en zonas elevadas.',
+        caracteristicas: [
+          'Equipo de altura para trabajos industriales y de construcción.',
+          'Ideal para mantenimiento, inspecciones y montajes.',
+          'Permite acceso seguro a puntos elevados.',
+          'Solución versátil para diferentes tipos de proyecto.',
+          'Equipo disponible según necesidad y programación.',
+        ],
+        especificaciones: [
+          { nombre: 'Altura de trabajo aproximada', valor: 'Por confirmar' },
+          { nombre: 'Alcance horizontal aproximado', valor: 'Por confirmar' },
+          { nombre: 'Capacidad de carga', valor: 'Por confirmar' },
+          { nombre: 'Tracción', valor: 'Por confirmar' },
+          { nombre: 'Tipo de equipo', valor: 'Brazo articulado / Manlift' },
+        ],
+      },
     ],
   },
 
@@ -108,7 +185,7 @@ function ScrollToHash() {
   const location = useLocation()
 
   useEffect(() => {
-    if (location.hash) {  
+    if (location.hash) {
       const elemento = document.querySelector(location.hash)
 
       if (elemento) {
@@ -315,9 +392,41 @@ function Inicio() {
   )
 }
 
+function ModelosManlift({ modelos, modeloActivo, setModeloActivo }) {
+  return (
+    <aside className="modelos-sidebar">
+      <h3>Modelos disponibles</h3>
+
+      <div className="modelos-list">
+        {modelos.map((modelo, index) => (
+          <button
+            type="button"
+            key={modelo.nombre}
+            className={`modelo-btn ${modeloActivo === index ? 'active' : ''}`}
+            onClick={() => setModeloActivo(index)}
+          >
+            <img src={modelo.imagen} alt={modelo.titulo} />
+
+            <span>
+              <small>{modelo.nombre}</small>
+              <strong>{modelo.titulo}</strong>
+            </span>
+          </button>
+        ))}
+      </div>
+
+      <div className="modelos-help">
+        <p>¿Necesitas ayuda para elegir el equipo ideal?</p>
+        <a href="#contacto">Contáctanos</a>
+      </div>
+    </aside>
+  )
+}
+
 function ProductoPage({ tipo }) {
   const producto = productos[tipo]
   const [tabActiva, setTabActiva] = useState('caracteristicas')
+  const [modeloActivo, setModeloActivo] = useState(0)
 
   if (!producto) {
     return (
@@ -347,21 +456,39 @@ function ProductoPage({ tipo }) {
     )
   }
 
+  const tieneModelos = tipo === 'manlift' && producto.modelos?.length > 0
+  const productoActivo = tieneModelos ? producto.modelos[modeloActivo] : producto
+
   return (
     <>
       <Header />
 
       <main>
         <section className="product-detail-section">
-          <div className="container product-detail-grid">
+          <div
+            className={`container product-detail-grid ${
+              tieneModelos ? 'product-detail-grid-modelos' : ''
+            }`}
+          >
+            {tieneModelos && (
+              <ModelosManlift
+                modelos={producto.modelos}
+                modeloActivo={modeloActivo}
+                setModeloActivo={(index) => {
+                  setModeloActivo(index)
+                  setTabActiva('caracteristicas')
+                }}
+              />
+            )}
+
             <div className="product-detail-image">
-              <img src={producto.imagen} alt={producto.titulo} />
+              <img src={productoActivo.imagen} alt={productoActivo.titulo} />
             </div>
 
             <div className="product-detail-info">
-              <span className="section-label">{producto.etiqueta}</span>
-              <h1>{producto.titulo}</h1>
-              <p>{producto.detalle}</p>
+              <span className="section-label">{productoActivo.etiqueta}</span>
+              <h1>{productoActivo.titulo}</h1>
+              <p>{productoActivo.detalle}</p>
 
               <div className="product-tabs">
                 <button
@@ -389,7 +516,7 @@ function ProductoPage({ tipo }) {
               <div className="product-tab-content">
                 {tabActiva === 'caracteristicas' && (
                   <ul className="detail-list">
-                    {producto.caracteristicas.map((item) => (
+                    {productoActivo.caracteristicas.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
@@ -397,7 +524,7 @@ function ProductoPage({ tipo }) {
 
                 {tabActiva === 'especificaciones' && (
                   <div className="spec-table">
-                    {producto.especificaciones.map((item) => (
+                    {productoActivo.especificaciones.map((item) => (
                       <div className="spec-row" key={item.nombre}>
                         <strong>{item.nombre}</strong>
                         <span>{item.valor}</span>
@@ -414,7 +541,7 @@ function ProductoPage({ tipo }) {
                     </p>
 
                     <a
-                      href={producto.fichaTecnica}
+                      href={productoActivo.fichaTecnica}
                       className="product-link"
                       target="_blank"
                       rel="noreferrer"
