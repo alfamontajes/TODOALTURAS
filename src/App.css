@@ -58,20 +58,34 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 34px;
 }
 
+/* 
+  Logo ajustado para la imagen todoalturas-logo-inicio.png.
+  La imagen original tiene mucho espacio transparente arriba y abajo,
+  por eso aquí se recorta visualmente dentro del contenedor del logo.
+*/
 .logo {
-  display: flex;
-  align-items: center;
+  display: block;
+  position: relative;
+  flex: 0 0 470px;
+  width: 470px;
+  height: 112px;
   text-decoration: none;
+  overflow: hidden;
 }
 
 .logo img {
-  height: 100px;
-  width: auto;
+  position: absolute;
+  width: 580px;
+  height: auto;
+  max-width: none;
+  max-height: none;
   display: block;
-  object-fit: contain;
+  object-fit: initial;
+  left: -67px;
+  top: -120px;
 }
 
 .menu {
@@ -79,13 +93,14 @@ main {
   gap: 24px;
   flex-wrap: wrap;
   justify-content: flex-end;
+  flex: 1;
 }
 
 .menu a {
   color: var(--blanco);
   text-decoration: none;
-  font-weight: 800;
-  font-size: 1.8rem;
+  font-weight: 900;
+  font-size: 2rem;
 }
 
 .menu a:hover {
@@ -98,10 +113,10 @@ main {
 
 .hero {
   width: 100%;
-  height: calc(100vh - 109px);
+  height: calc(100vh - 129px);
   min-height: 650px;
   position: sticky;
-  top: 109px;
+  top: 129px;
   overflow: hidden;
   background: var(--azul-oscuro);
   z-index: 1;
@@ -815,8 +830,18 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .logo {
+    flex: 0 0 360px;
+    width: 360px;
+    height: 90px;
+  }
+
   .logo img {
-    height: 75px;
+    width: 455px;
+    height: auto;
+    max-width: none;
+    left: -53px;
+    top: -94px;
   }
 
   .menu a {
@@ -919,6 +944,19 @@ main {
     width: 84px;
     height: 84px;
     transform: scale(1.18);
+  }
+  .logo {
+    flex: initial;
+    width: 300px;
+    height: 78px;
+  }
+
+  .logo img {
+    width: 380px;
+    height: auto;
+    max-width: none;
+    left: -44px;
+    top: -79px;
   }
 }
 
@@ -1192,8 +1230,8 @@ main {
   }
 
   .product-detail-info {
-    min-height: 720px;
-    height: 720px;
+    height: auto;
+    min-height: auto;
     padding: 20px;
     border-radius: 18px;
   }
@@ -1208,8 +1246,11 @@ main {
   }
 
   .product-tab-content {
-    min-height: auto;
+    height: auto;
+    min-height: 260px;
+    max-height: none;
     padding: 18px;
+    overflow-y: visible;
   }
 
   .spec-row {
