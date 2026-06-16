@@ -6,7 +6,7 @@ const productos = {
   manlift: {
     etiqueta: 'MANLIFT',
     titulo: 'Manlifts / Brazos articulados',
-    imagen: '/productos/manlift-grove-amz50xt.jpeg',
+    imagen: '/productos/manlift-2.jpeg',
     fichaTecnica: '/fichas/ficha-tecnica-manlift-grove-amz50xt.pdf',
     descripcion:
       'Equipos ideales para trabajos en altura, mantenimiento industrial, instalación de estructuras y acceso seguro en zonas elevadas.',
@@ -235,42 +235,50 @@ function Header() {
 function ContactoFooter() {
   return (
     <>
-      <section id="contacto" className="contact">
-        <div className="container contact-grid">
-          <div>
-            <span className="section-label">¡Cotiza hoy!</span>
-            <h2>Lleva tu proyecto a nuevas alturas</h2>
+    <section id="contacto" className="contact">
+      <div className="container contact-grid">
+        <div>
+          <span className="section-label">¡Cotiza hoy!</span>
+          <h2>Lleva tu proyecto a nuevas alturas</h2>
+          <p>
+            Comunícate con nosotros para recibir asesoría sobre alquiler de equipos,
+            andamios certificados y soluciones para trabajo seguro en alturas.
+          </p>
+        </div>
+
+        <div className="contact-box">
+          <div className="contact-info">
             <p>
-              Comunícate con nosotros para recibir asesoría sobre alquiler de equipos,
-              andamios certificados y soluciones para trabajo seguro en alturas.
+              <strong>Celular:</strong> 300 639 7448
+            </p>
+
+            <p>
+              <strong>Celular:</strong> 301 487 4353
+            </p>
+
+            <p>
+              <strong>Teléfono fijo:</strong> 602 334 8712
+            </p>
+
+            <p>
+              <strong>Correo:</strong> alfamontajesycubiertas@hotmail.com
+            </p>
+
+            <p>
+              <strong>Correo:</strong> comercial@alfamontajesycubiertas.com
+            </p>
+
+            <p>
+              <strong>Dirección:</strong> Calle 33D No. 17F2-69, Barrio Rafael Uribe Uribe
+            </p>
+
+            <p>
+              <strong>Ubicación:</strong> Cali, Valle del Cauca
             </p>
           </div>
-
-          <div className="contact-box">
-            <div className="contact-info">
-              <p>
-                <strong>Celular:</strong> 300 639 7448
-              </p>
-
-              <p>
-                <strong>Celular:</strong> 301 487 4353
-              </p>
-
-              <p>
-                <strong>Teléfono fijo:</strong> 602 334 8712
-              </p>
-
-              <p>
-                <strong>Correo:</strong> alfamontajesycubiertas@hotmail.com
-              </p>
-
-              <p>
-                <strong>Correo:</strong> comercial@alfamontajesycubiertas.com
-              </p>
-            </div>
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <footer className="footer">
         <div className="container footer-content">
@@ -286,7 +294,7 @@ function WhatsAppButton() {
   return (
     <a
       className="whatsapp-float"
-      href="https://wa.me/573014874553?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20TODO%20ALTURAS."
+      href="https://wa.me/573014874353?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20TODO%20ALTURAS."
       target="_blank"
       rel="noreferrer"
       aria-label="Abrir chat de WhatsApp con TODO ALTURAS"
@@ -299,9 +307,9 @@ function WhatsAppButton() {
 function ProductCard({ slug, producto }) {
   return (
     <Link to={`/producto/${slug}`} className="product-card">
-      <div className="product-image">
-        <span>{producto.etiqueta}</span>
-      </div>
+    <div className="product-image">
+      <img src={producto.imagen} alt={producto.titulo} />
+    </div>
 
       <div className="product-content">
         <h3>{producto.titulo}</h3>
@@ -565,15 +573,22 @@ function ProductoPage({ tipo }) {
                 )}
               </div>
 
-              <div className="product-detail-actions">
-                <a href="#contacto" className="product-link">
-                  Solicitar cotización
-                </a>
+            <div className="product-detail-actions">
+              <a
+                className="product-link"
+                href={`https://wa.me/573014874353?text=${encodeURIComponent(
+                  `Hola, quiero recibir cotización sobre ${producto.titulo}.`
+                )}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Solicitar cotización
+              </a>
 
-                <Link to="/#productos" className="back-link">
-                  Ver otros equipos
-                </Link>
-              </div>
+              <Link to="/#productos" className="back-link">
+                Ver otros equipos
+              </Link>
+            </div>
             </div>
           </div>
         </section>
