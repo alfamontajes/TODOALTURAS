@@ -50,57 +50,53 @@ main {
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 4px solid var(--amarillo);
+  border-bottom: 3px solid var(--amarillo);
 }
 
 .nav {
-  min-height: 125px;
+  min-height: 82px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 34px;
+  gap: 24px;
 }
 
-/* 
-  Logo ajustado para la imagen todoalturas-logo-inicio.png.
-  La imagen original tiene mucho espacio transparente arriba y abajo,
-  por eso aquí se recorta visualmente dentro del contenedor del logo.
-*/
 .logo {
   display: block;
   position: relative;
-  flex: 0 0 470px;
-  width: 470px;
-  height: 112px;
+  flex: 0 0 330px;
+  width: 330px;
+  height: 75px;
   text-decoration: none;
   overflow: hidden;
 }
 
 .logo img {
   position: absolute;
-  width: 580px;
+  width: 410px;
   height: auto;
   max-width: none;
   max-height: none;
   display: block;
   object-fit: initial;
-  left: -67px;
-  top: -120px;
+  left: -46px;
+  top: -85px;
 }
 
 .menu {
   display: flex;
-  gap: 24px;
+  gap: 28px;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
   flex: 1;
 }
 
 .menu a {
   color: var(--blanco);
   text-decoration: none;
-  font-weight: 900;
-  font-size: 2rem;
+  font-weight: 800;
+  font-size: 1.45rem;
 }
 
 .menu a:hover {
@@ -113,10 +109,10 @@ main {
 
 .hero {
   width: 100%;
-  height: calc(100vh - 129px);
+  height: calc(100vh - 85px);
   min-height: 650px;
   position: sticky;
-  top: 129px;
+  top: 85px;
   overflow: hidden;
   background: var(--azul-oscuro);
   z-index: 1;
@@ -128,7 +124,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   z-index: 1;
 }
 
