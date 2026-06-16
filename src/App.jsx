@@ -276,6 +276,14 @@ function ContactoFooter() {
               <strong>Ubicación:</strong> Cali, Valle del Cauca
             </p>
           </div>
+          <div className="contact-map">
+            <iframe
+              title="Ubicación ALFA MONTAJES Y CUBIERTAS S.A.S"
+              src="https://www.google.com/maps?q=ALFA%20MONTAJES%20Y%20CUBIERTAS%20S.A.S%2C%20Cali%2C%20Valle%20del%20Cauca%2C%20Colombia&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>       
         </div>
       </div>
     </section>
