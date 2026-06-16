@@ -253,7 +253,7 @@ function ContactoFooter() {
               </p>
 
               <p>
-                <strong>Celular:</strong> 301 487 4553
+                <strong>Celular:</strong> 301 487 4353
               </p>
 
               <p>
@@ -265,7 +265,7 @@ function ContactoFooter() {
               </p>
 
               <p>
-                <strong>Correo:</strong> todoalturas@alfamontajesycubiertas.com
+                <strong>Correo:</strong> comercial@alfamontajesycubiertas.com
               </p>
             </div>
           </div>
