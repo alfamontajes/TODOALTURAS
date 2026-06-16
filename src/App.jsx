@@ -207,10 +207,22 @@ function Header() {
       <div className="container nav">
         <Link to="/" className="logo">
           <img src="/todoalturas-logo-inicio.png" alt="TODO ALTURAS" />
-        </Link>
+          </Link>
 
-        <nav className="menu">
-          <Link to="/#inicio">Inicio</Link>
+          <nav className="menu">
+            <Link
+      to="/"
+      onClick={() => {
+        setTimeout(() => {
+          document.getElementById("inicio")?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+      }}
+    >
+      Inicio
+    </Link>
           <Link to="/#productos">Productos</Link>
           <Link to="/#nosotros">Nosotros</Link>
           <Link to="/#contacto">Contacto</Link>
