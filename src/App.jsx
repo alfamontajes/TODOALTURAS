@@ -108,7 +108,7 @@ const productos = {
   tijera: {
     etiqueta: 'TIJERA',
     titulo: 'Plataforma tipo tijera',
-    imagen: '/productos/plataforma-tijera.jpg',
+    imagen: '/productos/tijera.jpeg',
     fichaTecnica: '/fichas/ficha-tecnica-plataforma-tijera.pdf',
     descripcion:
       'Plataforma de elevación para trabajos verticales en interiores, bodegas, mantenimiento, montajes y actividades de instalación.',
@@ -133,7 +133,7 @@ const productos = {
   andamio: {
     etiqueta: 'ANDAMIO',
     titulo: 'Andamio multidireccional certificado',
-    imagen: '/productos/andamio-multidireccional.jpg',
+    imagen: '/productos/andamio_multidireccional.png',
     fichaTecnica: '/fichas/ficha-tecnica-andamio-multidireccional.pdf',
     descripcion:
       'Sistema modular certificado para obras, montajes, mantenimiento de fachadas, cubiertas y acceso seguro en diferentes niveles de trabajo.',
@@ -158,7 +158,7 @@ const productos = {
   colgante: {
     etiqueta: 'COLGANTE',
     titulo: 'Andamio colgante eléctrico certificado',
-    imagen: '/productos/andamio-colgante-electrico.jpg',
+    imagen: '/productos/andamio_colgante.png',
     fichaTecnica: '/fichas/ficha-tecnica-andamio-colgante-electrico.pdf',
     descripcion:
       'Solución para trabajos en fachadas y acceso vertical seguro en proyectos de mantenimiento, instalación y construcción.',
@@ -319,6 +319,7 @@ function ProductCard({ slug, producto }) {
     </Link>
   )
 }
+
 
 function Inicio() {
   return (
