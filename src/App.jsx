@@ -30,7 +30,7 @@ const productos = {
       {
         nombre: 'Manlift 1',
         etiqueta: 'MANLIFT',
-        titulo: 'Manlift Grove AMZ50XT',
+        titulo: 'MANLIFT JLG 450 AJ',
         imagen: '/productos/manlift-grove-amz50xt.jpeg',
         fichaTecnica: '/fichas/ficha-tecnica-manlift-grove-amz50xt.pdf',
         descripcion:
@@ -55,7 +55,7 @@ const productos = {
       {
         nombre: 'Manlift 2',
         etiqueta: 'MANLIFT',
-        titulo: 'Manlift 2',
+        titulo: 'MANLIFT GROVE AMZ50XT',
         imagen: '/productos/manlift-2.jpeg',
         fichaTecnica: '/fichas/ficha-tecnica-manlift-2.pdf',
         descripcion:
@@ -70,17 +70,17 @@ const productos = {
           'Disponible para alquiler con acompañamiento y asesoría.',
         ],
         especificaciones: [
-          { nombre: 'Altura de trabajo aproximada', valor: 'Por confirmar' },
-          { nombre: 'Alcance horizontal aproximado', valor: 'Por confirmar' },
-          { nombre: 'Capacidad de carga', valor: 'Por confirmar' },
-          { nombre: 'Tracción', valor: 'Por confirmar' },
+          { nombre: 'Altura de trabajo aproximada', valor: '15 m' },
+          { nombre: 'Alcance horizontal aproximado', valor: '7 m' },
+          { nombre: 'Capacidad de carga', valor: '250 kg' },
+          { nombre: 'Tracción', valor: '4WD' },
           { nombre: 'Tipo de equipo', valor: 'Brazo articulado / Manlift' },
         ],
       },
       {
         nombre: 'Manlift 3',
         etiqueta: 'MANLIFT',
-        titulo: 'Manlift 3',
+        titulo: 'MANLIFT GROVE AMZ50XT',
         imagen: '/productos/manlift-3.jpeg',
         fichaTecnica: '/fichas/ficha-tecnica-manlift-3.pdf',
         descripcion:
@@ -95,10 +95,10 @@ const productos = {
           'Equipo disponible según necesidad y programación.',
         ],
         especificaciones: [
-          { nombre: 'Altura de trabajo aproximada', valor: 'Por confirmar' },
-          { nombre: 'Alcance horizontal aproximado', valor: 'Por confirmar' },
-          { nombre: 'Capacidad de carga', valor: 'Por confirmar' },
-          { nombre: 'Tracción', valor: 'Por confirmar' },
+          { nombre: 'Altura de trabajo aproximada', valor: '15 m' },
+          { nombre: 'Alcance horizontal aproximado', valor: '7 m' },
+          { nombre: 'Capacidad de carga', valor: '250 kg' },
+          { nombre: 'Tracción', valor: '4WD' },
           { nombre: 'Tipo de equipo', valor: 'Brazo articulado / Manlift' },
         ],
       },
