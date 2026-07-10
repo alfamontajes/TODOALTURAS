@@ -2,6 +2,16 @@ import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-do
 import { useEffect, useState } from 'react'
 import './App.css'
 
+// Función para reportar conversiones a Google Ads de forma segura en React
+const reportarConversion = (urlDestino) => {
+  if (typeof window.gtag_report_conversion === 'function') {
+    window.gtag_report_conversion(urlDestino);
+  } else {
+    // Si el script de Google no ha cargado, abre la URL de todas formas
+    window.open(urlDestino, '_blank', 'noreferrer');
+  }
+};
+
 const productos = {
   manlift: {
     etiqueta: 'MANLIFT',
@@ -299,16 +309,18 @@ function ContactoFooter() {
 }
 
 function WhatsAppButton() {
+  const urlWhatsapp = "https://wa.me/573014874353?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20TODO%20ALTURAS.";
+
   return (
-    <a
+    <button
+      type="button"
       className="whatsapp-float"
-      href="https://wa.me/573014874353?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20TODO%20ALTURAS."
-      target="_blank"
-      rel="noreferrer"
+      onClick={() => reportarConversion(urlWhatsapp)}
+      style={{ border: 'none', background: 'none', padding: 0, cursor: 'pointer' }}
       aria-label="Abrir chat de WhatsApp con TODO ALTURAS"
     >
       <img src="/whatsapp-icon.png" alt="WhatsApp" />
-    </a>
+    </button>
   )
 }
 
@@ -581,22 +593,25 @@ function ProductoPage({ tipo }) {
                 )}
               </div>
 
-            <div className="product-detail-actions">
-              <a
-                className="product-link"
-                href={`https://wa.me/573014874353?text=${encodeURIComponent(
-                  `Hola, quiero recibir cotización sobre ${producto.titulo}.`
-                )}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Solicitar cotización
-              </a>
-
-              <Link to="/#productos" className="back-link">
-                Ver otros equipos
-              </Link>
-            </div>
+              <div className="product-detail-actions">
+                <button
+                  type="button"
+                  className="product-link"
+                  onClick={() => {
+                    const urlCotizacion = `https://wa.me/573014874353?text=${encodeURIComponent(
+                      `Hola, quiero recibir cotización sobre ${producto.titulo}.`
+                    )}`;
+                    reportarConversion(urlCotizacion);
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
+                  Solicitar cotización
+                </button>
+              
+                <Link to="/#productos" className="back-link">
+                  Ver otros equipos
+                </Link>
+              </div>
             </div>
           </div>
         </section>
