@@ -1055,7 +1055,6 @@ main {
 
 .product-detail-grid {
   display: grid;
-  grid-template-columns: 290px minmax(430px, 1fr) 420px;
   gap: 24px;
   align-items: stretch;
   background: #ffffff;
@@ -1352,6 +1351,108 @@ main {
 .product-card:hover,
 .product-card:hover * {
   text-decoration: none;
+}
+
+/* =========================
+   PRODUCTOS CON UN SOLO MODELO
+========================= */
+
+.product-detail-grid-unico {
+  grid-template-columns: minmax(420px, 0.9fr) minmax(520px, 1.1fr);
+  max-width: 1250px;
+  margin: 0 auto;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.product-detail-grid-unico .product-detail-image {
+  min-height: 620px;
+  max-height: 720px;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+}
+
+.product-detail-grid-unico .product-detail-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
+  max-height: 720px;
+  object-fit: contain;
+  object-position: center;
+  padding: 30px;
+}
+
+.product-detail-grid-unico .product-detail-info {
+  min-height: 620px;
+  padding: 42px;
+}
+
+.product-detail-grid-unico .product-detail-info h1 {
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+}
+
+.product-detail-grid-unico .product-tab-content {
+  height: 280px;
+  min-height: 280px;
+  max-height: 280px;
+}
+
+@media (max-width: 1100px) {
+  .product-detail-grid-unico {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .product-detail-grid-unico .product-detail-image,
+  .product-detail-grid-unico .product-detail-info {
+    min-height: 540px;
+  }
+
+  .product-detail-grid-unico .product-detail-image img {
+    min-height: 540px;
+  }
+}
+
+@media (max-width: 900px) {
+  .product-detail-grid-unico {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail-grid-unico .product-detail-image {
+    min-height: auto;
+    max-height: 500px;
+  }
+
+  .product-detail-grid-unico .product-detail-image img {
+    min-height: 0;
+    height: auto;
+    max-height: 500px;
+    padding: 24px;
+  }
+
+  .product-detail-grid-unico .product-detail-info {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-detail-grid-unico .product-detail-image img {
+    max-height: 350px;
+    padding: 15px;
+  }
+
+  .product-detail-grid-unico .product-detail-info {
+    padding: 22px;
+  }
+
+  .product-detail-grid-unico .product-detail-info h1 {
+    font-size: 2.1rem;
+  }
+
+  .product-detail-grid-unico .product-tab-content {
+    height: auto;
+    min-height: 260px;
+    max-height: none;
+  }
 }
 
 /* =========================

@@ -497,7 +497,7 @@ function ProductoPage({ tipo }) {
     )
   }
 
-  const tieneModelos = tipo === 'manlift' && producto.modelos?.length > 0
+  const tieneModelos = producto.modelos?.length > 1
   const productoActivo = tieneModelos ? producto.modelos[modeloActivo] : producto
 
   return (
@@ -506,11 +506,13 @@ function ProductoPage({ tipo }) {
 
       <main>
         <section className="product-detail-section">
-          <div
-            className={`container product-detail-grid ${
-              tieneModelos ? 'product-detail-grid-modelos' : ''
-            }`}
-          >
+        <div
+          className={`container product-detail-grid ${
+            tieneModelos
+              ? 'product-detail-grid-modelos'
+              : 'product-detail-grid-unico'
+          }`}
+        >
             {tieneModelos && (
               <ModelosManlift
                 modelos={producto.modelos}
